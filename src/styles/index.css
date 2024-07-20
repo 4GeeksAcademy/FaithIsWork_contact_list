@@ -1,3 +1,13 @@
-/* 
-    General Styles
-*/
+body{
+     background-image: url("https://img.freepik.com/premium-photo/close-up-lock-circuit-cyber-security-safeguard-your-cryptocurrency-wallet_87646-24679.jpg?w=996"); 
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-color: rgba(255, 255, 255, 0.5); /* Adjust alpha (last value) for transparency */
+     min-height: 100vh;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+    }
