@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "red");
 			},
-			onClick={() => deleteData(task.id)}
+			
 
 getContacts: () => {
 	fetch("https://playground.4geeks.com/contact/agendas/FaithIsWork/contacts")
@@ -63,6 +63,17 @@ getContacts: () => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			handleDelete: (id) => {
+				fetch(`https://playground.4geeks.com/contact/agendas/FaithIsWork/contacts/${id}`,
+					{
+						method: 'DELETE'
+
+					}
+				)	.then(respose=>respose.json())
+					.then (data => console.log(data))
+					
+
 			}
 		}
 	};

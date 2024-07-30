@@ -78,7 +78,9 @@ export const Demo = () => {
 			  required
 			></textarea>
 		  </div>
-		  	<Link type="button" onClick={()=>actions.handleSendData(formData.fullName,formData.email,formData.phone,formData.address)} className="btn btn-primary text-light">Submit</Link>
+		  <Link to={'/'}>
+		  	<button type="button" onClick={()=>actions.handleSendData(formData.fullName,formData.email,formData.phone,formData.address)} className="btn btn-primary text-light">Submit</button>
+		  </Link>
 		</form>
 	  </div>
 	)

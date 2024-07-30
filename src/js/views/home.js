@@ -30,7 +30,7 @@ export const Home = () => {
                 {// Conditional render example
                 // Check to see if the background is orange, if so, display the message
                 }
-                <button className="btn " onClick={() => actions.changeColor()}>
+                <button className="btn " onClick={() => actions.handleDelete(item.id)}>
                 <i class="fas fa-trash"></i>
                 </button>
               </li>
