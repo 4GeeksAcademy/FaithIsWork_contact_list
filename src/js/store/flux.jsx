@@ -16,7 +16,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 getContacts: () => {
 	fetch("https://playground.4geeks.com/contact/agendas/FaithIsWork/contacts")
 		.then(res => res.json())
-		.then(data => setStore({ contacts: data.contacts }))
+		.then(data => {
+		setStore({ contacts: data.contacts })})
 },
 	handleSendData: (fullName, email, phone, address) => {
 		fetch('https://playground.4geeks.com/contact/agendas/FaithIsWork/contacts',
@@ -31,7 +32,9 @@ getContacts: () => {
 				})
 			}
 		).then(res => res.json())
-			.then(data => console.log(data))
+			.then(data => {
+				getActions().getContacts()
+			})
 
 	},
 		loadSomeData: () => {
@@ -59,8 +62,9 @@ getContacts: () => {
 						method: 'DELETE'
 
 					}
-				)	.then(respose=>respose.json())
-					.then (data => console.log(data))
+				)	.then(respose=>{
+					getActions().getContacts()
+				})
 					
 
 			}

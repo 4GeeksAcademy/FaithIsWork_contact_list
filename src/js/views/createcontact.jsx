@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Context } from "../store/appContext";
+import { Context } from "../store/appContext.jsx";
 
 export const CreateContact = () =>{
     const {store,actions} =useContext(Context);
