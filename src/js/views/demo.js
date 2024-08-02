@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import Thinking from "../../img/m101.jpg"; 
+
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
@@ -27,11 +27,11 @@ export const Demo = () => {
 		// Example: sendFormDataToServer(formData);
 	  };
 	return (
-		<div className="container-fluid col-12 mt-5 "style={{width: '100%'}}>
-		<h2 className="text-center mb-4 text-light">Contact Information</h2>
-		<form onSubmit={handleSubmit}>
+		<div className="container-fluid col-12 mt-5 bg-light"style={{width: '100%'}}>
+		<h2 className="text-center mb-4 text-dark">Contact Information</h2>
+		<form onSubmit={handleSubmit} className="">
 		  <div className="mb-3">
-			<label htmlFor="fullName" className="form-label text-light">Full Name</label>
+			<label htmlFor="fullName" className="form-label text-dark">Full Name</label>
 			<input
 			  type="text"
 			  className="form-control"
@@ -43,7 +43,7 @@ export const Demo = () => {
 			/>
 		  </div>
 		  <div className="mb-3">
-			<label htmlFor="email" className="form-label text-light">Email address</label>
+			<label htmlFor="email" className="form-label text-dark">Email address</label>
 			<input
 			  type="email"
 			  className="form-control"
@@ -55,7 +55,7 @@ export const Demo = () => {
 			/>
 		  </div>
 		  <div className="mb-3">
-			<label htmlFor="phone" className="form-label text-light text-light">Phone Number</label>
+			<label htmlFor="phone" className="form-label text-dark">Phone Number</label>
 			<input
 			  type="tel"
 			  className="form-control"
@@ -67,7 +67,7 @@ export const Demo = () => {
 			/>
 		  </div>
 		  <div className="mb-3">
-			<label htmlFor="address" className="form-label text-light">Address</label>
+			<label htmlFor="address" className="form-label text-dark">Address</label>
 			<textarea
 			  className="form-control"
 			  id="address"

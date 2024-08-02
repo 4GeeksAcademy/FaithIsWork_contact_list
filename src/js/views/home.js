@@ -4,7 +4,7 @@ import "../../styles/home.css"; // Ensure this imports your CSS file
 import Thinking from "../../img/m101.jpg"; 
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import wallet from "../../img/wallet.jpeg";
+
    
 export const Home = () => {
     const { store, actions } = useContext(Context);
